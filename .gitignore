@@ -1,0 +1,14 @@
+# AWS credentials - never upload
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+
+# Airflow logs
+logs/

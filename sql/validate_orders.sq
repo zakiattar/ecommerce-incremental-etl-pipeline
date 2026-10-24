@@ -1,0 +1,26 @@
+```sql
+-- 1. Total orders
+SELECT COUNT(*) AS total_orders
+FROM orders;
+
+
+-- 2. Find duplicate orders
+SELECT
+    order_id,
+    COUNT(*) AS record_count
+FROM orders
+GROUP BY order_id
+HAVING COUNT(*) > 1;
+
+
+-- 3. Check null values
+SELECT COUNT(*) AS invalid_orders
+FROM orders
+WHERE order_id IS NULL
+   OR customer_id IS NULL;
+
+
+-- 4. Calculate total revenue
+SELECT SUM(quantity * price) AS total_revenue
+FROM orders;
+```
